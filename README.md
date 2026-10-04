@@ -1,53 +1,70 @@
 # EasyMeds
-This project proposes the design and development of a mobile application tailored  specifically for elderly users to help them manage their medication routines effectively. The  focus of this project is not only functionality but also usability, accessibility, and  human-centered design.
 
-## How to Run EasyMeds
+A mobile-friendly web app designed for elderly users to help them manage their medication routines. The focus is not only on functionality but also on usability, accessibility, and human-centered design.
 
-This is a **React web app** that runs in your browser via a local dev server.
+**Live demo:** https://easy-meds-e3x8.vercel.app/
 
-## Prerequisites
+## Tech Stack
 
-- [Node.js](https://nodejs.org/) v18 or higher (you can check: `node --version`)
+- React
+- Vite
+- Tailwind CSS (via PostCSS)
+
+## Running Locally
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) v18 or higher (check with `node --version`)
 - npm (comes with Node.js)
 
-## Steps
+### Steps
 
-1. **Unzip** the project folder and open a terminal inside it.
+1. **Clone the repo** and open a terminal inside it:
+```bash
+   git clone https://github.com/safiamussaratt/EasyMeds.git
+   cd EasyMeds
+```
 
 2. **Install dependencies** (only needed once):
-   ```bash
+```bash
    npm install
-   ```
+```
 
 3. **Start the dev server**:
-   ```bash
+```bash
    npm run dev
-   ```
+```
 
-4. **Open your browser** and go to:
-   ```
+4. **Open your browser** at:
+```
    http://localhost:5173
-   ```
+```
 
-That's it! The app will hot-reload automatically when you edit files.
+The app hot-reloads when you edit files.
 
-## To view on your phone (same Wi-Fi)
+### Viewing on your phone (same Wi-Fi)
 
-Run with `--host` to expose it on your local network:
+Run the dev server with `--host` to expose it on your local network:
 ```bash
 npm run dev -- --host
 ```
 Then open the IP address shown in the terminal (e.g. `http://192.168.x.x:5173`) on your phone.
 
-## Build for production
+## Build for Production
 
 ```bash
 npm run build
 ```
 Output goes to the `dist/` folder.
 
-## What was fixed
+## Deployment
 
-- `react` and `react-dom` were listed as optional `peerDependencies`, which meant
-  they weren't being installed. They've been moved to `dependencies` so `npm install`
-  picks them up automatically.
+The app is deployed on [Vercel](https://vercel.com). To deploy your own copy:
+
+1. Import the repo into Vercel.
+2. Use the auto-detected Vite settings (build command `npm run build`, output directory `dist`).
+3. Click **Deploy**. Every push to `main` redeploys automatically.
+
+## License
+
+MIT, see [LICENSE](LICENSE).
